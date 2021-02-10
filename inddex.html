@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body {
+    background-color: white;
+}
+	</style>
+</head>
+<body>
+<button class='color' data-color='red'>red</button>
+<button class='color' data-color='green'>green</button>
+<button class='color' data-color='blue'>blue</button>
+<script type="text/javascript">
+	NodeList.prototype.__proto__ = Array.prototype;
+	document.querySelectorAll('.color').forEach(function (i){
+    var dataColor = i.getAttribute('data-color')
+    i.style.color = dataColor;
+    i.onclick = (function (){
+       document.body.style.backgroundColor = dataColor;
+       i.style.color = 'black';
+    });
+    });
+</script>
+</body>
+</html>
