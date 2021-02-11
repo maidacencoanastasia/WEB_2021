@@ -22,9 +22,9 @@ function myFunccc(){
 	let admin = "admin"
 	let pole = document.getElementById("pole");
 	let pass = document.getElementById("pass");
-	if ( pole.value ===" " ){
+	if ( pole.value ==" "||pass.value =="" ){
     console.log("Ошибка Валидации");
-  }else if (pole.value == pass.value) {
+  }else if (pole.value === pass.value) {
     console.log("Привет");
   } else if (pole.value != admin){
     console.log("Неправильный username");
@@ -32,7 +32,6 @@ function myFunccc(){
     console.log("Неправильный пароль");
   }
 }
-
 ////////////////////////////////////////  4  ///////////////////////////////////////
 function myFunction(){
 	let a = parseInt(document.getElementById("var1").value);
