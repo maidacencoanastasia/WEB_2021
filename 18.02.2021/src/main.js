@@ -47,4 +47,10 @@ if (calculateMedia() > 0) {
 
 const average = marks.reduce((sum, amount) => sum + amount, 0) / totalnumberofmarks
 
-console.log("Medie din elemente", marks.join(", "), " = ", average)
+console.log("Medie din toate note", marks.join(", "), " = ", average)
+
+const positivemarks = marks.filter(item => item > 5)
+//console.log(positivemarks);
+const positiveaverage = positivemarks.reduce((sum, amount) => sum + amount, 0) / positivemarks.length
+//console.log(positiveaverage);
+console.log("Medie din note pozitive", positivemarks.join(", "), " = ", positiveaverage)
